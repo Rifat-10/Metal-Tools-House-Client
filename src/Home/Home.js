@@ -1,5 +1,6 @@
 import React from 'react';
 import ReviewsInHome from '../Review/ReviewsInHome/ReviewsInHome';
+import AboutUs from './AboutUs/AboutUs';
 import Banner from './Banner/Banner';
 import BusinessSummery from './BusinessSummery/BusinessSummery';
 import OurCapabilities from './Capabilities/OurCapabilities';
@@ -16,6 +17,8 @@ const Home = () => {
             <br /> <br /> <br /> <br />
             <br /> <br /> <br /> <br />
             <OurCapabilities></OurCapabilities>
+             <br /> <br /> <br /> <br />
+            <AboutUs></AboutUs>
              <br /> <br /> <br /> <br />
             <ReviewsInHome></ReviewsInHome>
              <br /> <br /> <br /> <br />
