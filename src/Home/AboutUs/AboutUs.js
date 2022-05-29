@@ -78,7 +78,7 @@ const AboutUs = () => {
                                 </div>
                                 <div className="col-12 col-md-6 col-lg-3">
                                     <div className="text-center about-card h-100">
-                                        <i class="fas fa-volleyball fs-2 mb-3"></i>
+                                        <i class="fas fa-screwdriver-wrench fs-2 mb-3"></i>
                                         <h6 className="fw-bold text-dark text-uppercase">Great Metal Tools</h6>
                                         <p>Affordable</p>
                                     </div>
