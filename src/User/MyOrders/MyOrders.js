@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import DeleteConfirmModal from "../Operations/DeleteConfirmModal";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -13,11 +13,11 @@ const MyOrders = () => {
 
   const { data: myOrders, isLoading, refetch } = useQuery("myOrders", () =>
     fetch(
-      `http://localhost:5000/myOrders?userEmail=${user.email}`
+      `https://hidden-ravine-16154.herokuapp.com/myOrders?userEmail=${user.email}`
     ).then((res) => res.json())
   );
 
-  if(isLoading){
+  if (isLoading) {
     return <Loading></Loading>
   }
 
@@ -45,7 +45,7 @@ const MyOrders = () => {
             {/* <!-- row 2 --> */}
             {myOrders.map((myOrder, index) => (
               <tr className='hover text-center'>
-                <th>{index+1}</th>
+                <th>{index + 1}</th>
                 <td>{myOrder.productId}</td>
                 <td>{myOrder.orderQuantity}</td>
                 <td>{myOrder.orderPayable} $</td>

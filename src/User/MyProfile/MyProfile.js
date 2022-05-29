@@ -12,7 +12,7 @@ const MyProfile = () => {
   const [linkedInProfile, setLinkedInProfile] = useState(null);
   const [myProfile, setMyProfile] = useState(null);
 
-  
+
 
   const handleEducation = (event) => {
     setEducation(event?.target?.value);
@@ -40,7 +40,7 @@ const MyProfile = () => {
     };
 
     fetch(
-      `http://localhost:5000/myProfile/${user.email}`,
+      `https://hidden-ravine-16154.herokuapp.com/myProfile/${user.email}`,
       {
         method: "PUT",
         headers: {
@@ -53,7 +53,7 @@ const MyProfile = () => {
       .then((result) => {
         if (result) {
           fetch(
-            `http://localhost:5000/myProfile/${user.email}`
+            `https://hidden-ravine-16154.herokuapp.com/myProfile/${user.email}`
           )
             .then((res) => res.json())
             .then((data) => {
@@ -129,9 +129,8 @@ const MyProfile = () => {
           <div>
             <button
               type='submit'
-              className={`btn ${
-                myProfile ? "btn-success" : "btn-primary"
-              } text-bold my-4 btn-wide text-xl`}
+              className={`btn ${myProfile ? "btn-success" : "btn-primary"
+                } text-bold my-4 btn-wide text-xl`}
             >
               {myProfile ? "Update" : "Add Details"}
             </button>

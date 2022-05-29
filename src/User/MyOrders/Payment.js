@@ -2,9 +2,9 @@ import React from "react";
 import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
 import Loading from "../../Loading/Loading";
-import {useAuthState} from "react-firebase-hooks/auth";
+import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../Firebase/firebase.init";
-import {loadStripe} from '@stripe/stripe-js'
+import { loadStripe } from '@stripe/stripe-js'
 import {
   CardElement,
   Elements,
@@ -23,14 +23,14 @@ const Payment = () => {
 
   const { data: paymentOrder, isLoading } = useQuery("paymentOrder", () =>
     fetch(
-      `http://localhost:5000/myOrders/${id}`
+      `https://hidden-ravine-16154.herokuapp.com/myOrders/${id}`
     ).then((res) => res.json())
   );
 
   if (isLoading) {
     return <Loading></Loading>;
   }
-  
+
   return (
     <div className='w-10/12 mx-auto lg:mx-0'>
       <div className='lg:w-1/2 mx-auto my-10'>

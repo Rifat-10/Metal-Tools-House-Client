@@ -8,7 +8,7 @@ const Dashboard = () => {
   const [accessLevel, setAccessLevel] = useState("");
 
   fetch(
-    `http://localhost:5000/myProfile/${user.email}`
+    `https://hidden-ravine-16154.herokuapp.com/myProfile/${user.email}`
   )
     .then((res) => res.json())
     .then((data) => {

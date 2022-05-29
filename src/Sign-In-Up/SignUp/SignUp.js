@@ -51,7 +51,7 @@ const SignUp = () => {
             location: "",
             linkedInProfile: "",
         };
-        fetch(`http://localhost:5000/myProfile/${email}`,
+        fetch(`https://hidden-ravine-16154.herokuapp.com/myProfile/${email}`,
             {
                 method: "PUT", headers: {
                     "content-type": "application/json"

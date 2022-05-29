@@ -9,7 +9,7 @@ import {
 import auth from "../../Firebase/firebase.init";
 
 const CheckoutForm = ({ paymentOrder }) => {
-    console.log(paymentOrder);
+  console.log(paymentOrder);
   const stripe = useStripe();
   const elements = useElements();
   const [cardError, setCardError] = useState("");
@@ -22,7 +22,7 @@ const CheckoutForm = ({ paymentOrder }) => {
   useEffect(() => {
     (async () => {
       await fetch(
-        "http://localhost:5000/create-payment-intent",
+        "https://hidden-ravine-16154.herokuapp.com/create-payment-intent",
         {
           method: "POST",
           headers: { "content-type": "application/json" },
@@ -95,7 +95,7 @@ const CheckoutForm = ({ paymentOrder }) => {
       })
         .then((res) => res.json())
         .then((data) => {
-            
+
         });
     }
   };
