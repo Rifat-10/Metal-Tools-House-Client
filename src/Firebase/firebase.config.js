@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_apiKey,
-    authDomain: process.env.REACT_APP_authDomain,
-    projectId: process.env.REACT_APP_projectId,
-    storageBucket: process.env.REACT_APP_storageBucketT,
-    messagingSenderId: process.env.REACT_APP_messagingSenderId,
-    appId: process.env.REACT_APP_appId,
+    apiKey: "AIzaSyDQOI6iPMLdMERKNiv1lKdxj4zwgdLtp3g",
+  authDomain: "metal-tools-house.firebaseapp.com",
+  projectId: "metal-tools-house",
+  storageBucket: "metal-tools-house.appspot.com",
+  messagingSenderId: "198911987735",
+  appId: "1:198911987735:web:ab12e551b8e994c5840c52"
 };
 
 export default firebaseConfig;
