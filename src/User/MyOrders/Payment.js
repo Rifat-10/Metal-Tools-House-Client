@@ -1,9 +1,9 @@
 import React from "react";
 import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
-import Loading from "../../Shared/Loading/Loading";
+import Loading from "../../Loading/Loading";
 import {useAuthState} from "react-firebase-hooks/auth";
-import auth from "../../../firebase.init";
+import auth from "../../Firebase/firebase.init";
 import {loadStripe} from '@stripe/stripe-js'
 import {
   CardElement,
@@ -23,7 +23,7 @@ const Payment = () => {
 
   const { data: paymentOrder, isLoading } = useQuery("paymentOrder", () =>
     fetch(
-      `https://limitless-scrubland-96637.herokuapp.com/myOrders/${id}`
+      `http://localhost:5000/myOrders/${id}`
     ).then((res) => res.json())
   );
 

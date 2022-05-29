@@ -9,25 +9,25 @@ import img6 from '../Images/Items/9225_photo.jpg';
 import './Footer.css';
 
 const Footer = () => {
-  
+
     return (
         <div id="big-footer">
             <div className="container font-color-footer pt-5 pb-4 px-4 px-lg-0">
                 <div className="row g-5">
                     <div className="col-12 col-lg-4">
                         <div className="d-flex align-items-center mb-4">
-                            <i class="fas fa-screwdriver-wrench fs-2 me-3"></i>
+                            <i className="fas fa-screwdriver-wrench fs-2 me-3"></i>
                             <h5 className="footer-brand m-0 pt-2">M e t a l T o o l s H o u s e</h5>
                         </div>
                         <p>For over 20 years, Metal Tools House has dedicated itself to providing service, quality, and professionalism to the sports community.
                             Thanks to our amazing customers. We may be small in size, but we make sure to fill every inch of our stores with quality sports equipment.
                             So, stop in for a visit! Our staff is here to assist you.</p>
-                        
+
                         <div className="mt-5">
-                            <i class="fs-1 me-2 fab fa-cc-paypal"></i>
-                            <i class="fs-1 me-2 fab fa-cc-visa"></i>
-                            <i class="fs-1 me-2 fab fa-cc-mastercard"></i>
-                            <i class="fs-1 me-2 fab fa-cc-amex"></i>
+                            <i className="fs-1 me-2 fab fa-cc-paypal"></i>
+                            <i className="fs-1 me-2 fab fa-cc-visa"></i>
+                            <i className="fs-1 me-2 fab fa-cc-mastercard"></i>
+                            <i className="fs-1 me-2 fab fa-cc-amex"></i>
                         </div>
                     </div>
                     <div className="col-12 col-lg-2">
@@ -95,7 +95,7 @@ const Footer = () => {
                                 <div className="col-4">
                                     <img src={img6} alt="" className="w-100" />
                                 </div>
-                             
+
                             </div>
                         </div>
                     </div>

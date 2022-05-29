@@ -75,26 +75,26 @@ const Purchase = () => {
     <div className='w-10/12 mx-auto '>
       <div className='lg:w-1/2 mx-auto my-10'>
 
-        <div class='divider font-bold text-xl'>ITEM DETAILS</div>
+        <div className='divider font-bold text-xl'>ITEM DETAILS</div>
         <div className='p-10 text-left bg-base-300 rounded-lg'>
           <img src={tool.img} alt='' className='lg:w-1/2 mx-auto rounded-lg' />
           <h3 className='text-2xl text-center py-2'>{tool.name}</h3>
           <p className='text pb-2'>{tool.description}</p>
           <h5 className='text-xl font-bold'>
-            Price : <div class='badge badge-outline text-black '>{tool.price} $</div>
+            Price : <div className='badge badge-outline text-black '>{tool.price} $</div>
           </h5>
           <h5 className='text-xl font-bold'>
             Available Quantity :{" "}
-            <div class='badge badge-outline text-xl p-2 text-black'>
+            <div className='badge badge-outline text-xl p-2 text-black'>
               {tool.available_quantity}
             </div>
           </h5>
           <h5 className='text-xl font-bold'>
             Order Minimum :{" "}
-            <div class='badge badge-outline text-black'>{tool.minimum_order_quantity}</div>
+            <div className='badge badge-outline text-black'>{tool.minimum_order_quantity}</div>
           </h5>
         </div>
-        <div class='divider font-bold text-black'>ORDER HERE</div>
+        <div className='divider font-bold text-black'>ORDER HERE</div>
         <div className='p-10 text-left bg-base-300 rounded-lg text-black'>
           <h3 className='text-center font-bold lg:text-4xl text-3xl'>ORDER</h3>
           <div className='card mt-5 my-10 mx-auto shadow-2xl bg-base-200'>
@@ -166,8 +166,8 @@ const Purchase = () => {
                   </label>
                 </div>
                 <div className=''>
-                  <label class='label'>
-                    <span class='label-text pt-3'>Order Quantity</span>
+                  <label className='label'>
+                    <span className='label-text pt-3'>Order Quantity</span>
                   </label>
                   <input
                     type='number'

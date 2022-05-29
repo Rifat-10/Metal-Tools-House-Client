@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import DeleteConfirmModal from "../Operations/DeleteConfirmModal";
 import { useAuthState } from "react-firebase-hooks/auth";
-import auth from "../../../firebase.init";
+import auth from "../../Firebase/firebase.init";
 import { useQuery } from "react-query";
 import Loading from "../../Loading/Loading";
 
@@ -13,7 +13,7 @@ const MyOrders = () => {
 
   const { data: myOrders, isLoading, refetch } = useQuery("myOrders", () =>
     fetch(
-      `https://hidden-ravine-16154.herokuapp.com/myOrders?userEmail=${user.email}`
+      `http://localhost:5000/myOrders?userEmail=${user.email}`
     ).then((res) => res.json())
   );
 

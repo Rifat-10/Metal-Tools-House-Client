@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
-import { Link, NavLink} from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 import useFirebase from '../hooks/useFirebase';
 import avatar from '../Images/avatar/avatar.jpg';
@@ -15,7 +15,7 @@ const Navigation = () => {
       <Navbar bg='light' expand='lg'>
         <Container>
           <Navbar.Brand as={Link} to='/' className="fw-bold">
-            Sportswear City
+            Metal Tools House
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
@@ -34,13 +34,13 @@ const Navigation = () => {
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link as={Link} to='/'>
-                      Add Inventory
+                    <Nav.Link as={Link} to='myportfolio'>
+                    My Portfolio
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link as={Link} to='/'>
-                      My Inventories
+                      
                     </Nav.Link>
                   </Nav.Item>
                 </>
@@ -49,7 +49,7 @@ const Navigation = () => {
               )}
 
               <Nav.Item>
-                <Nav.Link as={Link} to='/'>
+                <Nav.Link as={Link} to='/blog'>
                   Blog
                 </Nav.Link>
               </Nav.Item>
@@ -75,12 +75,12 @@ const Navigation = () => {
                       <NavLink to="/">{user?.email && user?.photoURL ? <img src={user?.photoURL} className="user-img" alt="" /> : <img src={avatar} title="User not logged in" alt="" className="user-img" />}</NavLink>
                       {user?.email && <span className="nav-text ms-3 text-uppercase">{user?.displayName}</span>}
                     </div>
-                    <button onClick={logOut} className="btn authentication-btn rounded-pill ms-3"><p className='m-0'><i class="fas fa-sign-out-alt me-2"></i>Log Out</p></button>
+                    <button onClick={logOut} className="btn authentication-btn rounded-pill ms-3"><p className='m-0'><i className="fas fa-sign-out-alt me-2"></i>Log Out</p></button>
 
                   </div>
                     : <div>
-                      <NavLink to="/signin"><button className="btn authentication-btn rounded-0 me-3"><p><i class="fas fa-sign-in-alt me-2"></i>Log In</p></button></NavLink>
-                      <NavLink to="/signup"><button className="btn authentication-btn rounded-0"><p><i class="fas fa-sign-in-alt me-2"></i>Register</p></button></NavLink>
+                      <NavLink to="/signin"><button className="btn authentication-btn rounded-0 me-3"><p><i className="fas fa-sign-in-alt me-2"></i>Log In</p></button></NavLink>
+                      <NavLink to="/signup"><button className="btn authentication-btn rounded-0"><p><i className="fas fa-sign-in-alt me-2"></i>Register</p></button></NavLink>
                     </div>}
                 </div>
               </div>}

@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
-import auth from "../Firebase/firebase.init";
+import { getAuth } from "firebase/auth";
 
 const Dashboard = () => {
-  const [user] = useAuthState(auth);
+  const [user] = useAuthState(getAuth());
   const [accessLevel, setAccessLevel] = useState("");
 
   fetch(
-    `https://hidden-ravine-16154.herokuapp.com/myProfile/${user.email}`
+    `http://localhost:5000/myProfile/${user.email}`
   )
     .then((res) => res.json())
     .then((data) => {
@@ -16,15 +16,17 @@ const Dashboard = () => {
     });
   return (
     <div>
-      <div class='drawer drawer-mobile'>
-        <input id='dashboardSidebar' type='checkbox' class='drawer-toggle' />
-        <div class='drawer-content'>
+      <div class="drawer drawer-mobile">
+        <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content flex flex-col items-center justify-center">
           {/* <!-- Page content here --> */}
           <Outlet></Outlet>
+          <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open drawer</label>
+
         </div>
-        <div class='drawer-side'>
-          <label for='dashboardSidebar' class='drawer-overlay'></label>
-          <ul class='menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content'>
+        <div class="drawer-side">
+          <label for="my-drawer-2" class="drawer-overlay"></label>
+          <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
             {/* <!-- Sidebar content here --> */}
             <li>
               <Link to='/dashboard'>My Profile</Link>

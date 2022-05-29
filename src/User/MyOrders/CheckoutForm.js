@@ -6,7 +6,7 @@ import {
   useStripe,
   useElements,
 } from "@stripe/react-stripe-js";
-import auth from "../../../firebase.init";
+import auth from "../../Firebase/firebase.init";
 
 const CheckoutForm = ({ paymentOrder }) => {
     console.log(paymentOrder);
@@ -22,7 +22,7 @@ const CheckoutForm = ({ paymentOrder }) => {
   useEffect(() => {
     (async () => {
       await fetch(
-        "https://limitless-scrubland-96637.herokuapp.com/create-payment-intent",
+        "http://localhost:5000/create-payment-intent",
         {
           method: "POST",
           headers: { "content-type": "application/json" },

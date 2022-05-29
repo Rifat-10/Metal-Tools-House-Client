@@ -51,41 +51,41 @@ const AboutUs = () => {
                             <h5 className="mb-4 border-start border-3 ps-3 border-dark">About Us</h5>
                             <h2 className="mb-4">Get to know a little about us!</h2>
                             <p>For over 20 years, Metal Tools House has dedicated itself to providing service, quality, and professionalism to the metal community.
-                            Thanks to our amazing customers. We may be small in size, but we make sure to fill every inch of our stores with quality metal tools.
-                            So, stop in for a visit! Our staff is here to assist you.
-                            
+                                Thanks to our amazing customers. We may be small in size, but we make sure to fill every inch of our stores with quality metal tools.
+                                So, stop in for a visit! Our staff is here to assist you.
+
                             </p><br />
                             <p>Our staff has all the knowledge and experience to help you find exactly what you’re looking for.
-                            Whether you're a pro, hobbyist, or complete beginner, we are here to help you get the most out of your gear..</p><br />
-                            <p><span class="color">Our Beliefs</span></p><br />
+                                Whether you're a pro, hobbyist, or complete beginner, we are here to help you get the most out of your gear..</p><br />
+                            <p><span className="color">Our Beliefs</span></p><br />
                             <p>We believe in the close relationship between people and sports.
-                            We acknowledge the inseparable connection between tools and the brand.
-                            We understand customers’ needs for tools house.</p>
+                                We acknowledge the inseparable connection between tools and the brand.
+                                We understand customers’ needs for tools house.</p>
                             <div className="mt-5 row g-3">
                                 <div className="col-12 col-md-6 col-lg-3">
                                     <div className="text-center about-card h-100">
-                                        <i class="fas fa-handshake fs-2 mb-3"></i>
+                                        <i className="fas fa-handshake fs-2 mb-3"></i>
                                         <h6 className="fw-bold text-dark text-uppercase">Best Deals</h6>
                                         <p>Affordable</p>
                                     </div>
                                 </div>
                                 <div className="col-12 col-md-6 col-lg-3">
                                     <div className="text-center about-card h-100">
-                                        <i class="fas fa-globe fs-2 mb-3"></i>
+                                        <i className="fas fa-globe fs-2 mb-3"></i>
                                         <h6 className="fw-bold text-dark text-uppercase">Best Offers</h6>
                                         <p>Every Level</p>
                                     </div>
                                 </div>
                                 <div className="col-12 col-md-6 col-lg-3">
                                     <div className="text-center about-card h-100">
-                                        <i class="fas fa-screwdriver-wrench fs-2 mb-3"></i>
+                                        <i className="fas fa-screwdriver-wrench fs-2 mb-3"></i>
                                         <h6 className="fw-bold text-dark text-uppercase">Great Metal Tools</h6>
                                         <p>Affordable</p>
                                     </div>
                                 </div>
                                 <div className="col-12 col-md-6 col-lg-3">
                                     <div className="text-center about-card h-100">
-                                        <i class="fas fa-user-check fs-2 mb-3"></i>
+                                        <i className="fas fa-user-check fs-2 mb-3"></i>
                                         <h6 className="fw-bold text-dark text-uppercase">Fast Booking</h6>
                                         <p>All Products</p>
                                     </div>

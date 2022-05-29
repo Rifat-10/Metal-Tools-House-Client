@@ -39,6 +39,29 @@ const SignUp = () => {
     //signup method (sign up)
     const handleSignup = (e) => {
         e.preventDefault();
+
+        console.log(name, email);
+
+        const currentUser = {
+            name: name,
+            email: email,
+            access: "user",
+            phoneNumber: "",
+            education: "",
+            location: "",
+            linkedInProfile: "",
+        };
+        fetch(`http://localhost:5000/myProfile/${email}`,
+            {
+                method: "PUT", headers: {
+                    "content-type": "application/json"
+                },
+                body: JSON.stringify(currentUser)
+
+            }).then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+            });
         // if (!/(?=.*[0-9])(?=.*[a-z]).{6}/.test(password)) {
         //     setError('Password should be at least of 6 characters and must have one digits, one lowercase letter');
         //     return;
@@ -78,7 +101,7 @@ const SignUp = () => {
                                     <div className="text-danger">{error}</div>
                                     <div className="text-danger">{authError}</div>
                                     <div className="text-center">
-                                        <button type="submit"className="btn btn-outline-dark rounded-0 mb-3">SignUp</button>
+                                        <button type="submit" className="btn btn-outline-dark rounded-0 mb-3">SignUp</button>
                                         <p>Already have an account? <NavLink className="text-decoration-none text-dark account-switch ms-2" to="/login">Please Login</NavLink></p>
                                     </div>
                                 </form>
