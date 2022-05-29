@@ -15,7 +15,7 @@ const Purchase = () => {
   console.log(user, id);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/tools/${id}`)
+    fetch(`https://hidden-ravine-16154.herokuapp.com/tools/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setTool(data);
@@ -43,7 +43,7 @@ const Purchase = () => {
       transactionId: "",
     };
 
-    await fetch("http://localhost:5000/order", {
+    await fetch("https://hidden-ravine-16154.herokuapp.com/order", {
       method: "POST",
       headers: {
         "content-type": "application/json",

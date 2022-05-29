@@ -29,8 +29,8 @@ const Navigation = () => {
               {user?.email ? (
                 <>
                   <Nav.Item>
-                    <Nav.Link as={Link} to='/'>
-                      Manage Inventory
+                    <Nav.Link as={Link} to='/dashboard'>
+                      Dashboard
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>

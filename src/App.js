@@ -10,6 +10,7 @@ import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import Purchase from "./PurchasePage/Purchase";
 import SignIn from "./Sign-In-Up/SignIn/SignIn";
 import SignUp from "./Sign-In-Up/SignUp/SignUp";
+import Dashboard from "./User/Dashboard";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <PrivateRoute><Purchase /></PrivateRoute> 
           }
         ></Route>
+        
        <Route path='login' element={<SignIn />}></Route>
        <Route path='signup' element={<SignUp />}></Route>
      </Routes>
