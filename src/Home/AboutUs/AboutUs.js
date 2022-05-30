@@ -58,7 +58,7 @@ const AboutUs = () => {
                             <p>Our staff has all the knowledge and experience to help you find exactly what you’re looking for.
                                 Whether you're a pro, hobbyist, or complete beginner, we are here to help you get the most out of your gear..</p><br />
                             <p><span className="color">Our Beliefs</span></p><br />
-                            <p>We believe in the close relationship between people and sports.
+                            <p>We believe in the close relationship between people and tools.
                                 We acknowledge the inseparable connection between tools and the brand.
                                 We understand customers’ needs for tools house.</p>
                             <div className="mt-5 row g-3">

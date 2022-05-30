@@ -3,7 +3,6 @@ import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
 import Loading from "../../Loading/Loading";
 import { useAuthState } from "react-firebase-hooks/auth";
-import auth from "../../Firebase/firebase.init";
 import { loadStripe } from '@stripe/stripe-js'
 import {
   CardElement,
@@ -12,6 +11,7 @@ import {
   useElements,
 } from "@stripe/react-stripe-js";
 import CheckoutForm from "./CheckoutForm";
+import { getAuth } from "firebase/auth";
 
 const stripePromise = loadStripe(
   "pk_test_51L4JoBJwTUE96RB6XlsuYGCFKJZzjoPDX2YSwgdoSpdJH9iIQocUq7q2yJ13XvfkT6oIJ8fRxf0N8khDlwncw4ta00ZS7lOhIb"
@@ -19,7 +19,7 @@ const stripePromise = loadStripe(
 
 const Payment = () => {
   const { id } = useParams();
-  const [user] = useAuthState(auth)
+  const [user] = useAuthState(getAuth())
 
   const { data: paymentOrder, isLoading } = useQuery("paymentOrder", () =>
     fetch(

@@ -7,6 +7,7 @@ import {
   useElements,
 } from "@stripe/react-stripe-js";
 import auth from "../../Firebase/firebase.init";
+import { getAuth } from "firebase/auth";
 
 const CheckoutForm = ({ paymentOrder }) => {
   console.log(paymentOrder);
@@ -15,7 +16,7 @@ const CheckoutForm = ({ paymentOrder }) => {
   const [cardError, setCardError] = useState("");
   const [cardSuccess, setCardSuccess] = useState("");
   const { _id, orderPayable, userEmail } = paymentOrder;
-  const [user] = useAuthState(auth);
+  const [user] = useAuthState(getAuth());
 
   const [clientSecret, setClientSecret] = useState("");
 
@@ -86,7 +87,7 @@ const CheckoutForm = ({ paymentOrder }) => {
       setCardError("");
       setCardSuccess("Success! Your payment is Completeted!");
       const transectionId = paymentIntent.id;
-      fetch(`https://limitless-scrubland-96637.herokuapp.com/order/${_id}`, {
+      fetch(`https://hidden-ravine-16154.herokuapp.com/order/${_id}`, {
         method: "PUT",
         headers: {
           "content-type": "application/json",

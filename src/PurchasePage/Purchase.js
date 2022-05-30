@@ -72,11 +72,11 @@ const Purchase = () => {
     setOrder(orderingQuantity);
   };
   return (
-    <div className='w-10/12 mx-auto '>
+    <div className='w-10/12 mx-auto  '>
       <div className='lg:w-1/2 mx-auto my-10'>
 
         <div className='divider font-bold text-xl'>ITEM DETAILS</div>
-        <div className='p-10 text-left bg-base-300 rounded-lg'>
+        <div className='p-10 text-left bg-zinc-300 rounded-lg'>
           <img src={tool.img} alt='' className='lg:w-1/2 mx-auto rounded-lg' />
           <h3 className='text-2xl text-center py-2'>{tool.name}</h3>
           <p className='text pb-2'>{tool.description}</p>
@@ -95,13 +95,13 @@ const Purchase = () => {
           </h5>
         </div>
         <div className='divider font-bold text-black'>ORDER HERE</div>
-        <div className='p-10 text-left bg-base-300 rounded-lg text-black'>
+        <div className='p-10 text-left bg-zinc-300 rounded-lg text-black'>
           <h3 className='text-center font-bold lg:text-4xl text-3xl'>ORDER</h3>
           <div className='card mt-5 my-10 mx-auto shadow-2xl bg-base-200'>
-            <div className='card-body'>
+            <div className='card-body '>
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className='form-control'>
-                  <label className='label'>
+                  <label className='label '>
                     <span className='label-text '>Product Id</span>
                   </label>
                   <input
@@ -143,9 +143,9 @@ const Purchase = () => {
                     })}
                     type='text'
                     placeholder='Phone'
-                    className='input input-bordered w-full'
+                    className='input input-bordered w-full  '
                   />
-                  <label className='text-error pt-1'>
+                  <label className='text-error pt-2 '>
                     {errors.phone && "Phone Number is Required"}
                   </label>
                 </div>
@@ -185,14 +185,14 @@ const Purchase = () => {
                       </p>
                       <button
                         type='submit'
-                        className='btn btn-primary text-xl '
+                        className='btn btn-success text-xl '
 
                       >
                         Purchase
                       </button>
                     </div>
                   ) : (
-                    <button type='submit' className='btn btn-primary text-xl' disabled>
+                    <button type='submit' className='btn btn-primary bg-danger text-xl'>
                       Purchase
                     </button>
                   )}

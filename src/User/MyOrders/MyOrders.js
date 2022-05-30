@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import DeleteConfirmModal from "../Operations/DeleteConfirmModal";
 import { useAuthState } from "react-firebase-hooks/auth";
-import auth from "../../Firebase/firebase.init";
 import { useQuery } from "react-query";
 import Loading from "../../Loading/Loading";
+import { getAuth } from "firebase/auth";
 
 const MyOrders = () => {
-  const [user] = useAuthState(auth);
+  const [user] = useAuthState(getAuth());
   const [deleteOrder, setDeleteOrder] = useState(null);
   const navigate = useNavigate();
 

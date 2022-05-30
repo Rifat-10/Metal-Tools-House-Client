@@ -68,19 +68,18 @@ const MyProfile = () => {
       });
   };
   return (
-    <div className='w-10/12 mx-auto lg:mx-0'>
-      <div className='lg:w-1/2 mx-auto my-10'>
-        <div className='text-center lg:w-1/2 py-2 bg-base-300 rounded-2xl'>
-          <h4 className='text-xl font-bold pb-2 text-white'>
-            {" "}
-            Your Cradentials{" "}
+    <div className='w-10/12 text-center mx-auto lg:mx-0'>
+      <div className='lg:w-1/2 mx-auto my-auto'>
+        <div className='text-center lg:w-1/2 py-2 bg-zinc-300 rounded-2xl'>
+          <h4 className='text-xl font-bold pb-2 text-black'>
+            {" "}         Your Cradentials{" "}
           </h4>
           <p>{user.displayName}</p>
           <p>{user.email}</p>
         </div>
         <div className='divider font-bold'>OTHER DETAILS</div>
         <form onSubmit={handleMyProfileForm}>
-          <div className='card p-10 text-left bg-base-300 rounded-2xl'>
+          <div className='card p-10 text-left bg-zinc-300 rounded-2xl'>
             <div className='py-1'>
               <label className='label'>
                 <span className='label-text text-sm'>Education</span>
@@ -129,8 +128,8 @@ const MyProfile = () => {
           <div>
             <button
               type='submit'
-              className={`btn ${myProfile ? "btn-success" : "btn-primary"
-                } text-bold my-4 btn-wide text-xl`}
+              className={`btn ${myProfile ? "btn-danger" :"btn-success" 
+                } text-bold my-4 btn-wide text-xl text-black`}
             >
               {myProfile ? "Update" : "Add Details"}
             </button>

@@ -16,6 +16,7 @@ import AddNewReview from "./Review/AddNewReview/AddNewReview";
 import Dashboard from "./User/Dashboard";
 import MyPortfolio from "./MyPortfolio/MyPortfolio";
 import Blogs from "./Blogs/Blogs";
+import MyProfile from "./User/MyProfile/MyProfile";
 
 
 function App() {
@@ -38,7 +39,7 @@ function App() {
             <PrivateRoute><Dashboard /></PrivateRoute>
           }
         >
-
+          <Route index element={<MyProfile />}></Route>
           <Route path='/dashboard/myorder' element={<MyOrders />}></Route>
           <Route path='/dashboard/payment/:id' element={<Payment />}></Route>
         </Route>
@@ -50,6 +51,7 @@ function App() {
 
           }
         ></Route>
+        <Route path="myorder" element={<MyOrders />}></Route>
         <Route path='myportfolio' element={<MyPortfolio />}></Route>
         <Route path='blog' element={<Blogs />}></Route>
         <Route path='login' element={<SignIn />}></Route>

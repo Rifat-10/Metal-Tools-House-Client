@@ -35,12 +35,12 @@ const Navigation = () => {
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link as={Link} to='myportfolio'>
-                    My Portfolio
+                      My Portfolio
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link as={Link} to='/'>
-                      
+
                     </Nav.Link>
                   </Nav.Item>
                 </>
@@ -73,9 +73,9 @@ const Navigation = () => {
                   {user?.email ? <div className="d-flex justify-content-between align-items-center">
                     <div className="">
                       <NavLink to="/">{user?.email && user?.photoURL ? <img src={user?.photoURL} className="user-img" alt="" /> : <img src={avatar} title="User not logged in" alt="" className="user-img" />}</NavLink>
-                      {user?.email && <span className="nav-text ms-3 text-uppercase">{user?.displayName}</span>}
+                      {user?.email && <span className="nav-text ms-1 text-uppercase">{user?.displayName}</span>}
                     </div>
-                    <button onClick={logOut} className="btn authentication-btn rounded-pill ms-3"><p className='m-0'><i className="fas fa-sign-out-alt me-2"></i>Log Out</p></button>
+                    <button onClick={logOut} className="btn authentication-btn rounded-pill ms-4"><p className='m-0'><i className="fas fa-sign-out-alt me-2"></i>Log Out</p></button>
 
                   </div>
                     : <div>
