@@ -51,7 +51,6 @@ function App() {
 
           }
         ></Route>
-        <Route path="myorder" element={<MyOrders />}></Route>
         <Route path='myportfolio' element={<MyPortfolio />}></Route>
         <Route path='blog' element={<Blogs />}></Route>
         <Route path='login' element={<SignIn />}></Route>

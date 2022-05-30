@@ -10,17 +10,20 @@ const MyOrders = () => {
   const [user] = useAuthState(getAuth());
   const [deleteOrder, setDeleteOrder] = useState(null);
   const navigate = useNavigate();
+  const email = user.email;
 
   const { data: myOrders, isLoading, refetch } = useQuery("myOrders", () =>
     fetch(
-      `https://hidden-ravine-16154.herokuapp.com/myOrders?userEmail=${user.email}`
+      `http://localhost:5000/myOrders/${email}`
     ).then((res) => res.json())
   );
 
   if (isLoading) {
+
     return <Loading></Loading>
   }
 
+  console.log(user.email,myOrders);
   const goToPaymentPage = (id) => {
     navigate(`/dashboard/payment/${id}`);
   };
@@ -41,8 +44,8 @@ const MyOrders = () => {
               <th>Options</th>
             </tr>
           </thead>
-          <tbody className='text-white'>
-            {/* <!-- row 2 --> */}
+           <tbody className='text-white'>
+         
             {myOrders.map((myOrder, index) => (
               <tr className='hover text-center'>
                 <th>{index + 1}</th>

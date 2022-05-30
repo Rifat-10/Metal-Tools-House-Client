@@ -107,7 +107,7 @@ const useFirebase = () => {
 
     // const saveUser = (email, displayName, method) => {
     //     const user = { email, displayName };
-    //     fetch('https://fierce-badlands-75560.herokuapp.com/users', {
+    //     fetch('https://hidden-ravine-16154.herokuapp.com/myProfile/', {
     //         method: method,
     //         headers: {
     //             'content-type': 'application/json'
@@ -118,7 +118,7 @@ const useFirebase = () => {
     // }
 
     // useEffect(() => {
-    //     fetch(`https://fierce-badlands-75560.herokuapp.com/users/${user.email}`)
+    //     fetch(`https://hidden-ravine-16154.herokuapp.com/myProfile`)
     //         .then(res => res.json())
     //         .then(data => setAdmin(data.admin));
     // }, [user.email])

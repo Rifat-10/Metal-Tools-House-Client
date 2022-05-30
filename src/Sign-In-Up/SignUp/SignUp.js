@@ -1,3 +1,4 @@
+import { getAuth } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router';
 import { NavLink } from 'react-router-dom';
@@ -5,7 +6,7 @@ import useAuth from '../../hooks/useAuth';
 import './SignUp.css';
 
 const SignUp = () => {
-    const { signInUsingGoogle, processSignup, authError } = useAuth();
+    const { signInUsingGoogle, processSignup, authError } = useAuth(getAuth());
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -51,6 +52,10 @@ const SignUp = () => {
             location: "",
             linkedInProfile: "",
         };
+
+        if (email){
+
+       
         fetch(`https://hidden-ravine-16154.herokuapp.com/myProfile/${email}`,
             {
                 method: "PUT", headers: {
@@ -62,6 +67,9 @@ const SignUp = () => {
             .then((data) => {
                 console.log(data);
             });
+
+
+        }
         // if (!/(?=.*[0-9])(?=.*[a-z]).{6}/.test(password)) {
         //     setError('Password should be at least of 6 characters and must have one digits, one lowercase letter');
         //     return;
