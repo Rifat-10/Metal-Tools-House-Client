@@ -23,7 +23,7 @@ const Payment = () => {
 
   const { data: paymentOrder, isLoading } = useQuery("paymentOrder", () =>
     fetch(
-      `https://hidden-ravine-16154.herokuapp.com/myOrders/${id}`
+      `http://localhost:5000/myOrders/${id}`
     ).then((res) => res.json())
   );
 

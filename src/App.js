@@ -42,15 +42,14 @@ function App() {
           <Route index element={<MyProfile />}></Route>
           <Route path='/dashboard/myorder' element={<MyOrders />}></Route>
           <Route path='/dashboard/payment/:id' element={<Payment />}></Route>
-        </Route>
-
-        <Route
-          path='addNewReview'
+          <Route
+          path='/dashboard/addNewReview'
           element={
-            <PrivateRoute><AddNewReview /></PrivateRoute>
-
+            <AddNewReview />
           }
         ></Route>
+        </Route>
+
         <Route path='myportfolio' element={<MyPortfolio />}></Route>
         <Route path='blog' element={<Blogs />}></Route>
         <Route path='login' element={<SignIn />}></Route>
