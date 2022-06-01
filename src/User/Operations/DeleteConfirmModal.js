@@ -1,12 +1,14 @@
-import React from "react";
+import React from 'react';
 import { toast } from "react-toastify";
 
-const DeleteConfirmModal = ({ order, refetch }) => {
+const DeleteConfirmModal = ({ order }) => {
   const { productName, _id } = order;
+
+  console.log(productName, _id);
 
   const handleDeleteOrder = async (id) => {
     await fetch(
-      `https://limitless-scrubland-96637.herokuapp.com/myOrders/${id}`,
+      `http://localhost:5000/myOrders/${id}`,
       {
         method: "DELETE",
       }
@@ -15,7 +17,6 @@ const DeleteConfirmModal = ({ order, refetch }) => {
       .then((result) => {
         if (result.acknowledged === true) {
           toast.success("The Order Deleted Successfully");
-          refetch();
         }
       });
   };

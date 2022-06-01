@@ -6,7 +6,6 @@ import {
   useStripe,
   useElements,
 } from "@stripe/react-stripe-js";
-import auth from "../../Firebase/firebase.init";
 import { getAuth } from "firebase/auth";
 
 const CheckoutForm = ({ paymentOrder }) => {
@@ -37,7 +36,6 @@ const CheckoutForm = ({ paymentOrder }) => {
           }
         });
     })();
-    // console.log(orderPayable, clientSecret);
   }, [orderPayable]);
 
   console.log(stripe);
@@ -52,13 +50,13 @@ const CheckoutForm = ({ paymentOrder }) => {
       return;
     }
 
-    const card = elements.getElement(CardElement);
+    const card = elements?.getElement(CardElement);
 
     if (card == null) {
       return;
     }
 
-    const { error, paymentMethod } = await stripe.createPaymentMethod({
+    const { error, paymentMethod } = await stripe?.createPaymentMethod({
       type: "card",
       card,
     });
@@ -71,7 +69,7 @@ const CheckoutForm = ({ paymentOrder }) => {
 
     // confirm payment
     const { paymentIntent, error: intentError } =
-      await stripe.confirmCardPayment(clientSecret, {
+      await stripe?.confirmCardPayment(clientSecret, {
         payment_method: {
           card: card,
           billing_details: {
@@ -86,7 +84,7 @@ const CheckoutForm = ({ paymentOrder }) => {
     } else {
       setCardError("");
       setCardSuccess("Success! Your payment is Completeted!");
-      const transectionId = paymentIntent.id;
+      const transectionId = paymentIntent?.id;
       fetch(`https://hidden-ravine-16154.herokuapp.com/order/${_id}`, {
         method: "PUT",
         headers: {
@@ -120,7 +118,7 @@ const CheckoutForm = ({ paymentOrder }) => {
       />
       <button
         type='submit'
-        className='btn btn-sm my-3'
+        className='btn btn-primary btn-sm my-3'
         disabled={!stripe || !clientSecret}
       >
         Pay

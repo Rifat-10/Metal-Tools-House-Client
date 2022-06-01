@@ -54,7 +54,6 @@ const Purchase = () => {
       .then((data) => {
         if (data.acknowledged === true) {
           toast.success("The Order Successfully Added to Order List");
-
         }
       });
   };

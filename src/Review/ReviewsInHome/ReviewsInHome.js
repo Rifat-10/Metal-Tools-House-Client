@@ -51,7 +51,7 @@ const ReviewsInHome = () => {
                             ))
                         }
                         {!admin && <div className="d-flex justify-content-center align-items-center">
-                            <NavLink to="/addNewReview" className="plus-text-reviews-home"><i className="far fa-plus-square plus-icon-reviews-home"></i></NavLink>
+                            <NavLink to="/dashboard/addNewReview" className="plus-text-reviews-home"><i className="far fa-plus-square plus-icon-reviews-home"></i></NavLink>
                         </div>}
                     </div>
                 )}

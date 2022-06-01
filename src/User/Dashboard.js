@@ -16,15 +16,16 @@ const Dashboard = () => {
     });
   return (
     <div>
-      <div class='drawer drawer-mobile'>
-        {/* <input id='dashboardSidebar' type='checkbox' class='drawer-toggle' /> */}
-        <div class='drawer-content'>
+      <div class="drawer">
+        {/* <input id="my-drawer" type="checkbox" class="drawer-toggle" /> */}
+        <div class="drawer-content">
           {/* <!-- Page content here --> */}
+          {/* <label for="my-drawer" class="btn btn-primary drawer-button">Open drawer</label> */}
           <Outlet></Outlet>
         </div>
-        <div class='drawer-side'>
-          <label for='dashboardSidebar' class='drawer-overlay'></label>
-          <ul class='menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content'>
+        <div class="drawer-side">
+          <label for="my-drawer" class="drawer-overlay"></label>
+          <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
             {/* <!-- Sidebar content here --> */}
             <li>
               <Link to='/dashboard'>My Profile</Link>
