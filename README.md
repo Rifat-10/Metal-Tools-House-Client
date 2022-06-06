@@ -10,6 +10,10 @@ Live Site Link: https://metal-tools-house.web.app/
 4) Data CRUD Operation in MongoDB
 5) Use Firebase Hook Used
 6) React Query, React-Form-Hook & Tostify has been used
+7) Here customers can buy many tools at any one time.
+8) For a better user experience, there is a secure authentication mechanism.
+9) To traverse customer and admin user routes, there is a well-designed dashboard.
+
 
 
 
